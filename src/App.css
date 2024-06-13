@@ -1,0 +1,86 @@
+#root {
+  min-height: 720px;
+  height: 100vh;
+}
+
+input:focus {
+  outline: none !important;
+  offset: 0 !important;
+}
+
+input:focus-visible {
+  outline: none !important;
+}
+
+.profile-pic {
+  color: transparent;
+  transition: all 0.3s ease;
+
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.imgAvatar {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 0;
+  border-radius: 150px;
+  z-index: 0;
+}
+
+.-label {
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  border-radius: 150px;
+  z-index: 10;
+}
+
+.--label {
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+}
+
+.--label:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  color: rgb(250, 250, 250);
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 150px;
+  margin-bottom: 0;
+}
+
+.-label:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  color: rgb(250, 250, 250);
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 150px;
+  margin-bottom: 0;
+}
+
+.spanava {
+  display: inline-flex;
+  padding: 0.2em;
+  height: 2em;
+}
+
+
+.flipAnimation {
+  animation: flip 2s;
+
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
