@@ -58,6 +58,7 @@ export function AddProducts() {
     });
 
     postMethodMultipart("/products", form, localStorage.getItem("token")).then((res) => {
+      console.log(res);
       if(res.status === "success"){
         toast({
             variant: "success",
