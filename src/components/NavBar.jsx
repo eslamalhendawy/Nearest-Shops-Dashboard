@@ -17,6 +17,7 @@ export const NavBar = () => {
   const { state } = useStore();
 
   useEffect(() => {
+    console.log(state);
     setActive(location.pathname);
   }, [location]);
   const [active, setActive] = useState(location.pathname);
@@ -48,15 +49,15 @@ export const NavBar = () => {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="icon" className="overflow-hidden rounded-full">
-            <img src={state.avatar} width={36} height={36} alt="Avatar" className="overflow-hidden rounded-full" />
+            <img src={state.photo} width={36} height={36} alt="Avatar" className="overflow-hidden rounded-full" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <Link to={"/profile"}>
+          {/* <DropdownMenuSeparator /> */}
+          {/* <Link to={"/profile"}>
             <DropdownMenuItem className="hover:cursor-pointer">Profile</DropdownMenuItem>
-          </Link>
+          </Link> */}
           <DropdownMenuSeparator />
           <DropdownMenuItem
             className="cursor-pointer"

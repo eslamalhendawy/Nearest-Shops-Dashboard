@@ -109,3 +109,21 @@ export const putMethodMultipart = async (url, data, token) => {
         })
     return result
 }
+
+export const patchMethod = async (url, data, token) => {
+    let result = {}
+    await axios
+        .patch(baseUrl + url, data, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        })
+        .then((res) => {
+            result = res.data
+        })
+        .catch((err) => {
+            result = err.response?.data
+        })
+    return result
+}

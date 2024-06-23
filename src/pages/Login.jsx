@@ -16,11 +16,12 @@ export function LoginForm() {
   });
 
   const onsSubmit = async () => {
-    const res = await postMethod("/auth/login", { email: formData.email, password: formData.password });
+    const res = await postMethod("/teachers/login", { email: formData.email, password: formData.password });
 
     toast({
-      variant: res.status === "error" || res.status === "fail" ? "destructive" : "success",
-      title: res.message,
+      variant: res.status === "error" || res.status === "fail" ? "destructive" : "",
+      title: res.status === "error" || res.status === "fail" ? res.message:"تم تسجيل الدخول بنجاح",
+
     });
     // console.log(res)
     if (res.status === "success") {
@@ -69,12 +70,12 @@ export function LoginForm() {
             Login
           </Button>
         </div>
-        <div className="mt-4 text-center text-sm">
+        {/* <div className="mt-4 text-center text-sm">
           Don&apos;t have an account?
           <Link to="/register" className="underline">
             Sign up
           </Link>
-        </div>
+        </div> */}
       </CardContent>
     </Card>
   );

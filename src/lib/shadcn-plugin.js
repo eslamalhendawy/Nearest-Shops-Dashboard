@@ -34,5 +34,5 @@ export const shadcnplugin = plugin(function ({ addBase }, theme) {
     }
 
     // Add the selected theme base styles
-    addBase(purpleTheme)
+    addBase(greenTheme)
 })

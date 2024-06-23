@@ -30,6 +30,15 @@ export const ProfileList = [
     // },
 ]
 
+
+export const Subjects = {
+    aqeedah: "العقيده",
+    hadeeth: "الحديث",
+    fiqh: "الفقه",
+    tafseer: "التفسير",
+}
+
+
 export const RecoveryQuestions = [
     "What is your mother's maiden name?",
     "What is the name of your first pet?",
