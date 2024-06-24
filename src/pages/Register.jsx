@@ -16,7 +16,6 @@ export function RegisterForm() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [government, setGovernment] = useState("");
-  const [address, setAddress] = useState("");
   const role = "vendor";
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -81,10 +80,8 @@ export function RegisterForm() {
       phone,
       passwordConfirm: confirmPassword,
       government,
-      address,
       role,
     });
-    console.log(res);
     if (res.status === "success") {
       toast({
         variant: "success",
@@ -127,10 +124,6 @@ export function RegisterForm() {
           <div className="grid gap-2">
             <Label htmlFor="phone">Phone Number</Label>
             <Input id="phone" type="tel" onChange={(e) => setPhone(e.target.value)} placeholder="Enter your phone number" required />
-          </div>
-          <div className="grid gap-2">
-            <Label htmlFor="phone">Address</Label>
-            <Input id="address" type="tel" onChange={(e) => setAddress(e.target.value)} placeholder="Enter your Address" required />
           </div>
           <div className="grid gap-2">
             <Label htmlFor="gender">Government</Label>
